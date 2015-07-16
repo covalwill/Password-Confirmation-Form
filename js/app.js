@@ -1,11 +1,16 @@
-$("form span").hide(); //Hides the span tag
-
-
 //cache the variable
 
 var $password = $("password")
 
 var $confirmPassword $("confirm_password")
+
+
+
+
+
+$("form span").hide(); //Hides the span tag
+
+
 
 
 
