@@ -1,36 +1,45 @@
 $("form span").hide(); //Hides the span tag
 
 
+//cache the variable
+
+var $password = $("password")
+
+var $confirmPassword $("confirm_password")
+
+
+
+
 
 // function that will validate and check for a character length of 8. If there is a length of more than 8 it will hide the span tag. 
 function passwordEvent() {
 
-	if ($(this).val().length > 8) {
+	if ($password.val().length > 8) {
 		
-		$(this).next().hide();
+		$password.next().hide();
 	} else {
 
-		$(this).next().show();
+		$password.next().show();
 	}
 }
 
 //
 function confirmPasswordEvent() {
 
-	if ($("password").val() === $("confirm_password").val()) {
+	if ($password.val() === $confirmPassword.val()) {
 		
-		$(this).next().hide();
+		$confirmPassword.next().hide();
 	} else {
 
-		$(this).next().show();
+		$confirmPassword.next().show();
 	}
 
 }
  
 
 //Password
-$("#password").focus(passwordEvent).keyup(passwordEvent);
+$password.focus(passwordEvent).keyup(passwordEvent);
 
 
 //Confirm Password
-$("#confirm_password").focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
+$confirmPassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent);
