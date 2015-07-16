@@ -2,7 +2,7 @@
 
 var $password = $("password")
 
-var $confirmPassword $("confirm_password")
+var $confirmPassword = $("confirm_password")
 
 
 
